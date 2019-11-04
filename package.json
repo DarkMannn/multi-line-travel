@@ -1,26 +1,43 @@
 {
 	"name": "multi-line-travel",
 	"displayName": "Multi Line Travel",
-	"description": "Multi Line Travel",
+	"description": "Navigate up and down traveling multiple line at once",
 	"version": "0.0.1",
 	"engines": {
 		"vscode": "^1.39.0"
 	},
 	"categories": [
 		"Other"
-	],
-	"activationEvents": [
-		"onCommand:extension.helloWorld"
-	],
+    ],
+    "activationEvents": [
+        "onCommand:multiLineTravel.travelUp",
+        "onCommand:multiLineTravel.travelDown"
+    ],
+    "contributes": {
+        "commands": [
+            {
+                "command": "multiLineTravel.travelUp",
+                "title": "Multi Line Travel Up"
+            },
+            {
+                "command": "multiLineTravel.travelDown",
+                "title": "Multi Line Travel Down"
+            }
+        ],
+        "keybindings": [
+            {
+                "command": "multiLineTravel.travelUp",
+                "key": "alt+i",
+                "when": "editorTextFocus"
+            },
+            {
+                "command": "multiLineTravel.travelDown",
+                "key": "alt+.",
+                "when": "editorTextFocus"
+            }
+        ]
+    },
 	"main": "./extension.js",
-	"contributes": {
-		"commands": [
-			{
-				"command": "extension.helloWorld",
-				"title": "Hello World"
-			}
-		]
-	},
 	"scripts": {
 		"test": "node ./test/runTest.js"
 	},
@@ -34,5 +51,11 @@
 		"mocha": "^6.2.2",
 		"typescript": "^3.6.4",
 		"vscode-test": "^1.2.2"
-	}
+    },
+    "keywords": [
+        "multi",
+        "line",
+        "travel",
+        "navigation"
+    ]
 }
