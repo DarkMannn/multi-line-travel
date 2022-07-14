@@ -1,15 +1,26 @@
-# MultiLineTravel README
-
-Travel multiple lines up or down in the editor
+# MultiLineTravel VsCode Extension
+Travel multiple lines up or down in the editor.
 
 ## Features
+The extension is configured so you travel a defined number of lines up, or down. The default number is 10. 
 
-For now, the extension is configured so you travel 10 lines up, or down.
+## Commands
+This extension defines two commands:
+- travel up
+  - name: multiLineTravel.travelUp
+  - key: [alt + i]
+- travel down:
+  - name: multiLineTravel.travelDown
+  - key: [alt + .]
 
-Commands:
-- travel up: [alt + i]
-- travel down: [alt + .]
+The keybindings can be customized.
 
-### 1.0.0
+## Extension Settings
+This extension contributes the following settings:
 
-Initial release
+* `MultiLineTravel.lineSkipNumber`: number of lines to skip when executing `travelUp` or `travelDown` commands (default is 10)
+
+## Release Notes
+### 0.0.0
+Initial implementation and functionality
+
